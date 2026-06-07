@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사소개 - VELTROX</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 스크롤 애니메이션 클래스 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 2초 딜레이를 주는 클래스 */
+        .delay-2s {
+            transition-delay: 2s;
+        }
+
+        .about-container {
+            display: flex;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 100px auto;
+            padding: 0 50px;
+            align-items: stretch;
+        }
+        
+        .about-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .about-right {
+            flex: 1;
+        }
+
+        .about-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 40px;
+        }
+
+        .about-desc {
+            font-size: 1.25rem;
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            word-break: keep-all;
+        }
+
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+        }
+
+        .info-label {
+            flex: 0 0 100px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 8px 0;
+            font-size: 0.95rem;
+            color: #666;
+            margin-right: 30px;
+        }
+
+        .info-value {
+            font-size: 1.05rem;
+            color: #333;
+        }
+
+        .building-img {
+            width: 100%;
+            height: 100%;
+            max-height: 700px; /* 기존 500px에서 700px로 늘림 */
+            object-fit: cover;
+            object-position: center; 
+            border-radius: 12px;
+        }
+
+        @media (max-width: 1024px) {
+            .about-container {
+                flex-direction: column;
+            }
+            .building-img {
+                min-height: 300px;
+            }
+        }
+
+        /* CEO 인사말 섹션 스타일 */
+        .ceo-section {
+            position: relative;
+            background-color: #8c8c8c; /* 이미지와 유사한 회색 배경 */
+            min-height: 80vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .ceo-title {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(2);
+            font-size: 3rem;
+            font-weight: 900;
+            color: #fff;
+            margin: 0;
+            transition: all 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+            white-space: nowrap;
+        }
+
+        .ceo-text-container {
+            position: absolute;
+            right: 15%;
+            top: 150%; /* 처음엔 완전히 아래에 숨김 */
+            width: 50%;
+            text-align: right;
+            opacity: 0;
+            color: #fff;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            word-break: keep-all;
+            transition: top 2.5s ease-out, opacity 2.5s ease-out;
+        }
+
+        /* 애니메이션 활성화 상태 */
+        .ceo-section.active .ceo-title {
+            left: 15%;
+            transform: translate(0, -50%) scale(1);
+        }
+
+        .ceo-section.active .ceo-text-container {
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+            /* 제목이 이동할 시간을 벌기 위해 딜레이 부여 */
+            transition-delay: 0.8s; 
+        }
+
+        @media (max-width: 1024px) {
+            .ceo-title {
+                font-size: 2rem;
+            }
+            .ceo-section.active .ceo-title {
+                left: 50%;
+                top: 20%;
+                transform: translate(-50%, 0) scale(1);
+            }
+            .ceo-text-container {
+                width: 80%;
+                right: 10%;
+                text-align: center;
+            }
+            .ceo-section.active .ceo-text-container {
+                top: 60%;
+            }
+        }
+
+        /* 조직도 섹션 스타일 */
+        .org-section {
+            background-color: #fff; /* 배경은 흰색 */
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 10%;
+        }
+
+        .org-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #333;
+            flex: 0 0 25%;
+        }
+
+        .org-content {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .org-img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 1024px) {
+            .org-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 5%;
+                gap: 40px;
+            }
+            .org-title {
+                font-size: 2.5rem;
+            }
+            .org-content {
+                justify-content: center;
+            }
+        }
+
+        /* 파트너 섹션 스타일 */
+        .partners-section {
+            background-color: #8c8c8c;
+            padding: 100px 10%;
+            min-height: 50vh;
+        }
+
+        .partners-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 40px;
+        }
+
+        .partners-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #fff;
+            flex: 0 0 25%;
+            margin: 0;
+        }
+
+        .partners-desc {
+            font-size: 1.25rem;
+            color: #333;
+            line-height: 1.6;
+            flex: 1;
+            margin: 0;
+            padding-top: 15px;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .partner-card {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* 패밀리 링크 (관련 사이트) 스타일 */
+        .family-links-container {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .family-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            min-width: 320px;
+        }
+
+        .family-link:hover {
+            background-color: #fff;
+            color: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* 각 브랜드 컬러 호버 효과 */
+        .family-link.youtube:hover {
+            background-color: #ff0000;
+            color: #fff;
+            border-color: #ff0000;
+        }
+
+        .family-link.cafe:hover {
+            background-color: #03c75a;
+            color: #fff;
+            border-color: #03c75a;
+        }
+
+        .family-link .arrow {
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .family-link:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        .partner-logo-container {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            min-height: 120px;
+        }
+
+        .partner-logo {
+            max-width: 80%;
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        .partner-name {
+            background-color: #f5f5f5;
+            padding: 15px;
+            color: #555;
+            font-size: 1rem;
+            font-weight: bold;
+            border-top: 1px solid #eee;
+        }
+
+        @media (max-width: 1024px) {
+            .partners-header {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="sub-page">
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><strong>VELTROX</strong></a>
+            </div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="business.html">사업분야</a></li>
+                    <li><a href="vtx-irs.html">솔루션</a></li>
+                    <li><a href="about.html">회사소개</a></li>
+                    <li><a href="board.html">고객지원</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mega Menu Dropdown -->
+        <div class="mega-menu">
+            <div class="mega-menu-container">
+                <div class="mega-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=600&auto=format&fit=crop" alt="AI Vision Technology">
+                </div>
+                <div class="mega-lists">
+                    <ul class="sub-list">
+                        <li><a href="business.html">INDUSTRIAL ROBOT</a></li>
+                        <li><a href="disaster.html">DISASTER ROBOT</a></li>
+                        <li><a href="service.html">SERVICE ROBOT</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="vtx-irs.html">VTX-IRS</a></li>
+                        <li><a href="vtx-drs.html">VTX-DRS</a></li>
+                        <li><a href="vtx-srs.html">VTX-SRS</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="about.html#overview">회사개요</a></li>
+                        <li><a href="about.html#ceo">CEO 인사말</a></li>
+                        <li><a href="about.html#organization">조직도</a></li>
+                        <li><a href="about.html#partners">파트너</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="board.html">자유게시판</a></li>
+                        
+                        <li><a href="as.html">A/S 신청</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="contact.html#careers">인재채용</a></li>
+                        <li><a href="contact.html#inquiry">사업문의</a></li>
+                        <li><a href="contact.html#location">찾아오시는 길</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about-hero" class="subpage-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('cococo.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center; background-color: #111;">
+        <div class="hero-content">
+            <h1 style="font-size: 3.5rem; letter-spacing: 2px;">INTRODUCTION</h1>
+            <p style="font-size: 1.2rem; font-weight: 300;">한 발 앞서, 더 스마트한 미래로 나아갑니다.</p>
+        </div>
+    </section>
+
+    <!-- 회사개요 컨텐츠 -->
+    <div class="about-container" id="overview">
+        <div class="about-left">
+            <!-- 제목은 딜레이 없이 바로 나타남 -->
+            <h2 class="about-title fade-in">회사개요</h2>
+            
+            <!-- 설명과 표는 2초 뒤에 나타남 -->
+            <div class="fade-in delay-2s">
+                <p class="about-desc">
+                    VELTROX는 AI 로봇 소프트웨어 기술을 기반으로 산업, 재난, 서비스 분야에 최적화된 자율 로봇 솔루션을 제공하는 글로벌 로봇 전문 기업입니다.
+                </p>
+                
+                <div class="info-list">
+                    <div class="info-row">
+                        <div class="info-label">회사명</div>
+                        <div class="info-value">VELTROX(주)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">대표이사</div>
+                        <div class="info-value">고윤호</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">설립년월</div>
+                        <div class="info-value">2026년 6월 7일</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">사업분야</div>
+                        <div class="info-value">산업용 로봇 / 재난 대응 로봇 / 서비스 로봇</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">인원</div>
+                        <div class="info-value">약 100여명</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">본사위치</div>
+                        <div class="info-value">서울특별시 oo구 ooo로 xxx 10층</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">대표전화</div>
+                        <div class="info-value">02) 1234-xxxx</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">홈페이지</div>
+                        <div class="info-value">www.veltrox.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-right">
+            <!-- 이미지도 2초 뒤에 함께 나타남 -->
+            <img src="building.jpg" alt="VELTROX 사옥 이미지" class="building-img fade-in delay-2s">
+        </div>
+    </div>
+
+    <!-- CEO 인사말 섹션 -->
+    <div class="ceo-section" id="ceo">
+        <h2 class="ceo-title">CEO 인사말</h2>
+        <div class="ceo-text-container">
+            <p>
+                VELTROX는 "혁신, 신뢰, 도전"이라는 핵심 가치 아래 AI 로봇 소프트웨어 기술로 세상을 변화시키기 위해 설립되었습니다.<br><br>
+                우리는 단순히 로봇을 만드는 것이 아닙니다. 인간이 더 안전하고 편리한 환경에서 살아갈 수 있도록, 기술이 사람 곁에서 함께 움직이는 미래를 만들어갑니다.<br><br>
+                산업 현장의 효율을 높이고, 재난 현장에서 생명을 구하며, 일상 속에서 더 나은 서비스를 제공하는 것. 이것이 VELTROX가 존재하는 이유입니다.<br><br>
+                앞으로도 최고의 기술력과 끊임없는 혁신으로 고객과 사회에 진정한 가치를 전달하는 기업이 되겠습니다.
+            </p>
+            <p style="margin-top: 50px; font-weight: bold; font-size: 1.25rem;">
+                VELTROX 주식회사<br>
+                대표이사 고윤호
+            </p>
+        </div>
+    </div>
+
+    <!-- 조직도 섹션 -->
+    <div class="org-section fade-in" id="organization">
+        <h2 class="org-title">조직도</h2>
+        <div class="org-content">
+            <img src="hahaha.png" alt="VELTROX 조직도" class="org-img">
+        </div>
+    </div>
+
+    <!-- 파트너 섹션 -->
+    <div class="partners-section fade-in" id="partners">
+        <div class="partners-header">
+            <h2 class="partners-title">파트너</h2>
+            <p class="partners-desc">벨트록스에게 도움이 되는 파트너 관계입니다.<br>
+                <span style="font-size: 0.95rem; color: #e0e0e0; display: inline-block; margin-top: 10px; font-weight: normal;">* 박스를 누르면 사이트로 이동합니다</span>
+            </p>
+        </div>
+        
+        <div class="partners-grid">
+            <a href="https://www.dongyang.ac.kr/" target="_blank" class="partner-card">
+                <div class="partner-logo-container">
+                    <img src="dongyang1.png" alt="동양미래대학교" class="partner-logo">
+                </div>
+                <div class="partner-name">동양미래대학교</div>
+            </a>
+            <a href="https://bootcamp.dongyang.ac.kr/" target="_blank" class="partner-card">
+                <div class="partner-logo-container">
+                    <img src="dongyang2.png" alt="반도체부트캠프사업단" class="partner-logo">
+                </div>
+                <div class="partner-name">반도체부트캠프사업단</div>
+            </a>
+            <a href="https://www.hansungit.co.kr/" target="_blank" class="partner-card">
+                <div class="partner-logo-container">
+                    <img src="dongyang3.png" alt="한성정보기술" class="partner-logo">
+                </div>
+                <div class="partner-name">한성정보기술</div>
+            </a>
+        </div>
+
+        <!-- 동양미래대학교 로봇자동화공학부 관련 링크 -->
+        <div class="family-links-container">
+            <a href="https://www.dongyang.ac.kr/dmu/4495/subview.do" target="_blank" class="family-link">
+                <span>동양미래대 로봇자동화공학부</span>
+                <span class="arrow">→</span>
+            </a>
+            <a href="https://youtube.com/@auto2con?si=z0H8nsNWdYwO1Ubd" target="_blank" class="family-link youtube">
+                <span>로봇자동화공학부 유튜브 채널</span>
+                <span class="arrow">→</span>
+            </a>
+            <a href="https://cafe.naver.com/dyrobot" target="_blank" class="family-link cafe">
+                <span>로봇자동화공학부 네이버 카페</span>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const items = document.querySelectorAll('.fade-in');
+            const ceoSection = document.getElementById('ceo');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.target.classList.contains('fade-in')) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        } else {
+                            if (entry.boundingClientRect.top > 0) {
+                                entry.target.classList.remove('visible');
+                            }
+                        }
+                    } else if (entry.target.id === 'ceo') {
+                        // CEO 섹션 애니메이션
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                        } else {
+                            if (entry.boundingClientRect.top > 0) {
+                                entry.target.classList.remove('active');
+                            }
+                        }
+                    }
+                });
+            }, { 
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            items.forEach(item => observer.observe(item));
+            if (ceoSection) observer.observe(ceoSection);
+        });
+    </script>
+    <!-- Global Footer -->
+    <footer id="global-footer" class="footer-fade-in">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <strong>VELTROX</strong>
+            </div>
+            <div class="footer-info">
+                <p>
+                    서울특별시 oo구 ooo로 xxx 10층 <span class="divider">|</span> 대표이사 : 고윤호 <span class="divider">|</span> 사업자번호 : 116-71-xxxxx
+                </p>
+                <p>
+                    TEL : 02-1234-xxxx <span class="divider">|</span> FAX : 02-1235-xxxx <span class="divider">|</span> E-mail : webmaster@veltrox.com
+                </p>
+                <p class="copyright">Copyright &copy; VELTROX Corp. All Rights Reserved.</p>
+            </div>
+        </div>
+        <button id="scrollToTop" class="scroll-to-top" title="맨 위로 가기">&#x2191;</button>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const footer = document.getElementById('global-footer');
+            if (footer) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(footer);
+            }
+
+            const scrollTopBtn = document.getElementById('scrollToTop');
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTX-DRS - VELTROX</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 스크롤 애니메이션 용 클래스 */
+        .scroll-item {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="sub-page">
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><strong>VELTROX</strong></a>
+            </div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="business.html">사업분야</a></li>
+                    <li><a href="vtx-irs.html">솔루션</a></li>
+                    <li><a href="about.html">회사소개</a></li>
+                    <li><a href="board.html">고객지원</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mega Menu Dropdown -->
+        <div class="mega-menu">
+            <div class="mega-menu-container">
+                <div class="mega-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=600&auto=format&fit=crop" alt="AI Vision Technology">
+                </div>
+                <div class="mega-lists">
+                    <ul class="sub-list">
+                        <li><a href="business.html">INDUSTRIAL ROBOT</a></li>
+                        <li><a href="disaster.html">DISASTER ROBOT</a></li>
+                        <li><a href="service.html">SERVICE ROBOT</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="vtx-irs.html">VTX-IRS</a></li>
+                        <li><a href="vtx-drs.html">VTX-DRS</a></li>
+                        <li><a href="vtx-srs.html">VTX-SRS</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="about.html#overview">회사개요</a></li>
+                        <li><a href="about.html#ceo">CEO 인사말</a></li>
+                        <li><a href="about.html#organization">조직도</a></li>
+                        <li><a href="about.html#partners">파트너</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="board.html">자유게시판</a></li>
+                        
+                        <li><a href="as.html">A/S 신청</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="contact.html#careers">인재채용</a></li>
+                        <li><a href="contact.html#inquiry">사업문의</a></li>
+                        <li><a href="contact.html#location">찾아오시는 길</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="drs-hero" class="subpage-hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('drsdrsdrs.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; background-color: #111;">
+        <div class="hero-content">
+            <h1>VTX-DRS</h1>
+        </div>
+    </section>
+
+    <div class="sub-content" style="max-width: 1400px; margin: 0 auto; padding: 100px 50px; text-align: center; min-height: 50vh;">
+        <h2 style="font-size: 2.2rem; font-weight: 800; color: #003a70; margin-bottom: 30px;">AI 기반 재난 대응 자율 로봇 시스템</h2>
+        <p style="font-size: 1.15rem; color: #333; line-height: 1.8; max-width: 1000px; margin: 0 auto 60px; word-break: keep-all;">
+            VELTROX의 AI 기술을 활용하여 인간이 접근하기 불가능한 극한 재난 환경에서 자율적으로 작동하는 로봇 시스템을 구축합니다. 열화상 카메라와 음향 센서를 통해 생존자를 신속하게 감지하고, 실시간 데이터 전송으로 현장 상황을 정확하게 파악합니다. 골든타임을 지키기 위해 VELTROX의 재난 대응 로봇이 가장 먼저 움직입니다.
+        </p>
+        <img src="drsdrs.png" alt="VTX-DRS 시스템" style="width: 100%; max-width: 1200px; height: auto;">
+        
+        <!-- Feature List -->
+        <div class="feature-list" style="margin-top: 100px; display: flex; flex-direction: column; gap: 80px; text-align: left; max-width: 1200px; margin-left: auto; margin-right: auto;">
+            
+            <div class="scroll-item" style="display: flex; align-items: center; gap: 50px;">
+                <div style="flex: 0 0 45%;">
+                    <img src="drs1.jpg" alt="자율 탐색" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="color: #004b87; font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;">자율 탐색</h3>
+                    <p style="color: #333; font-size: 1.15rem; line-height: 1.7; word-break: keep-all;">GPS 신호가 차단된 붕괴 건물 내부나 지하 환경에서도 SLAM 기술을 활용하여 스스로 경로를 탐색하고 장애물을 회피합니다.</p>
+                </div>
+            </div>
+
+            <div class="scroll-item" style="display: flex; align-items: center; gap: 50px;">
+                <div style="flex: 0 0 45%;">
+                    <img src="drs2.jpg" alt="생존자 감지" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="color: #004b87; font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;">생존자 감지</h3>
+                    <p style="color: #333; font-size: 1.15rem; line-height: 1.7; word-break: keep-all;">열화상 카메라로 체온을 감지하고 음향 센서로 미세한 소리를 포착하여 잔해 속 생존자의 위치를 신속하고 정확하게 파악합니다.</p>
+                </div>
+            </div>
+
+            <div class="scroll-item" style="display: flex; align-items: center; gap: 50px;">
+                <div style="flex: 0 0 45%;">
+                    <img src="drs3.jpg" alt="실시간 데이터 전송" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="color: #004b87; font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;">실시간 데이터 전송</h3>
+                    <p style="color: #333; font-size: 1.15rem; line-height: 1.7; word-break: keep-all;">위험 현장의 영상, 온도, 유독가스 농도 등 환경 데이터를 실시간으로 지휘본부에 전송하여 정확한 상황 판단과 신속한 의사결정을 지원합니다.</p>
+                </div>
+            </div>
+
+            <div class="scroll-item" style="display: flex; align-items: center; gap: 50px;">
+                <div style="flex: 0 0 45%;">
+                    <img src="drs4.jpg" alt="유해환경 대응" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="color: #004b87; font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;">유해환경 대응</h3>
+                    <p style="color: #333; font-size: 1.15rem; line-height: 1.7; word-break: keep-all;">화재, 유독가스, 방사선, 붕괴 현장 등 인간이 접근할 수 없는 극한 환경에서도 안정적으로 운용 가능한 내열·방진·방폭 설계가 적용되었습니다.</p>
+                </div>
+            </div>
+
+            <div class="scroll-item" style="display: flex; align-items: center; gap: 50px;">
+                <div style="flex: 0 0 45%;">
+                    <img src="drs5.jpg" alt="원격 제어" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 1;">
+                    <h3 style="color: #004b87; font-size: 1.5rem; font-weight: bold; margin-bottom: 15px;">원격 제어</h3>
+                    <p style="color: #333; font-size: 1.15rem; line-height: 1.7; word-break: keep-all;">안전 지역에서 운영자가 실시간 영상을 보며 로봇을 원격으로 정밀 제어하여 2차 피해 없이 현장 대응이 가능합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const items = document.querySelectorAll('.scroll-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // 뷰포트 안에 들어오면 나타나게 함
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        // 위로 스크롤하여 뷰포트 아래로 내려가면 다시 숨김 (밑에서부터 없어짐)
+                        if (entry.boundingClientRect.top > 0) {
+                            entry.target.classList.remove('visible');
+                        }
+                    }
+                });
+            }, { 
+                threshold: 0.15, // 요소가 15% 보일 때 트리거
+                rootMargin: "0px 0px -50px 0px" // 뷰포트 하단 여백 설정
+            });
+
+            items.forEach(item => observer.observe(item));
+        });
+    </script>
+    <!-- Global Footer -->
+    <footer id="global-footer" class="footer-fade-in">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <strong>VELTROX</strong>
+            </div>
+            <div class="footer-info">
+                <p>
+                    서울특별시 oo구 ooo로 xxx 10층 <span class="divider">|</span> 대표이사 : 고윤호 <span class="divider">|</span> 사업자번호 : 116-71-xxxxx
+                </p>
+                <p>
+                    TEL : 02-1234-xxxx <span class="divider">|</span> FAX : 02-1235-xxxx <span class="divider">|</span> E-mail : webmaster@veltrox.com
+                </p>
+                <p class="copyright">Copyright &copy; VELTROX Corp. All Rights Reserved.</p>
+            </div>
+        </div>
+        <button id="scrollToTop" class="scroll-to-top" title="맨 위로 가기">&#x2191;</button>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const footer = document.getElementById('global-footer');
+            if (footer) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(footer);
+            }
+
+            const scrollTopBtn = document.getElementById('scrollToTop');
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

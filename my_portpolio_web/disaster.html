@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISASTER ROBOT - VELTROX</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="sub-page">
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><strong>VELTROX</strong></a>
+            </div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="business.html">사업분야</a></li>
+                    <li><a href="vtx-irs.html">솔루션</a></li>
+                    <li><a href="about.html">회사소개</a></li>
+                    <li><a href="board.html">고객지원</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mega Menu Dropdown -->
+        <div class="mega-menu">
+            <div class="mega-menu-container">
+                <div class="mega-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=600&auto=format&fit=crop" alt="AI Vision Technology">
+                </div>
+                <div class="mega-lists">
+                    <ul class="sub-list">
+                        <li><a href="business.html">INDUSTRIAL ROBOT</a></li>
+                        <li><a href="disaster.html">DISASTER ROBOT</a></li>
+                        <li><a href="service.html">SERVICE ROBOT</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="vtx-irs.html">VTX-IRS</a></li>
+                        <li><a href="vtx-drs.html">VTX-DRS</a></li>
+                        <li><a href="vtx-srs.html">VTX-SRS</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="about.html#overview">회사개요</a></li>
+                        <li><a href="about.html#ceo">CEO 인사말</a></li>
+                        <li><a href="about.html#organization">조직도</a></li>
+                        <li><a href="about.html#partners">파트너</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="board.html">자유게시판</a></li>
+                        
+                        <li><a href="as.html">A/S 신청</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="contact.html#careers">인재채용</a></li>
+                        <li><a href="contact.html#inquiry">사업문의</a></li>
+                        <li><a href="contact.html#location">찾아오시는 길</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="disaster-hero" class="subpage-hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('dididisaster.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; background-color: #111;">
+        <div class="hero-content">
+            <h1>DISASTER</h1>
+            <p>스스로 움직이는 미래, VELTROX의 혁신적인 재난용 로봇</p>
+        </div>
+    </section>
+
+    <div class="sub-content" style="max-width: 1400px; margin: 0 auto; padding: 100px 50px; min-height: 100vh; display: flex; align-items: center; justify-content: center; width: 100%;">
+        <div class="business-grid" style="width: 100%;">
+            <div class="business-card" style="background-image: url('disaster.jpg'); cursor: pointer;" onclick="showDetail('disaster-1')">
+                <h2>험지 수색 & 인명 탐지</h2>
+                <a href="javascript:void(0);" onclick="event.preventDefault(); event.stopPropagation();" class="learn-more">자세히 보기</a>
+            </div>
+            
+            <div class="business-card" style="background-image: url('fire.jpg'); cursor: pointer;" onclick="showDetail('disaster-2')">
+                <h2>가스 및 화재 진압</h2>
+                <a href="javascript:void(0);" onclick="event.preventDefault(); event.stopPropagation();" class="learn-more">자세히 보기</a>
+            </div>
+            
+            <div class="business-card" style="background-image: url('explosive.jpg'); cursor: pointer;" onclick="showDetail('disaster-3')">
+                <h2>위험물 제거 & 원격 조작</h2>
+                <a href="javascript:void(0);" onclick="event.preventDefault(); event.stopPropagation();" class="learn-more">자세히 보기</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 클릭 시 나타나는 상세 설명 영역 -->
+    <div id="detail-section" class="sub-content" style="display: flex; max-width: 1400px; margin: 0 auto; padding: 100px 50px; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+        
+        <!-- 험지 수색 & 인명 탐지 -->
+        <div id="detail-disaster-1" class="disaster-detail-content" style="display: block; width: 100%; max-width: 1200px; padding: 20px 0;">
+            
+            <div style="display: flex; flex-direction: column; gap: 80px;">
+                <!-- 1 -->
+                <div style="display: flex; gap: 60px; align-items: center;">
+                    <div style="flex: 0 0 400px;">
+                        <img src="blue1.png" alt="LiDAR" style="width: 100%; border-radius: 16px; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; font-weight: 700;">LiDAR 기반 실시간 3D 지형 매핑</h3>
+                        <p style="color: #334155; font-size: 1.15rem; line-height: 1.7; margin: 0; padding: 0;">시야 확보가 불가능한 짙은 연기나 암흑 속에서도 3D LiDAR 센서를 통해 주변 환경을 실시간으로 스캔하고 정밀한 입체 지도를 생성하여 안전한 수색 경로를 확보합니다.</p>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div style="display: flex; gap: 60px; align-items: center;">
+                    <div style="flex: 0 0 400px;">
+                        <img src="blue2.png" alt="AI 비전" style="width: 100%; border-radius: 16px; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; font-weight: 700;">AI 비전 기반 생존자 탐지 및 추적</h3>
+                        <p style="color: #334155; font-size: 1.15rem; line-height: 1.7; margin: 0; padding: 0;">딥러닝 기반의 객체 인식 알고리즘을 탑재하여 붕괴 잔해 속에 쓰러져 있거나 조난된 인명을 고성능 비전 카메라로 신속하게 식별하고 위치를 추적합니다.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div style="display: flex; gap: 60px; align-items: center;">
+                    <div style="flex: 0 0 400px;">
+                        <img src="blue3.png" alt="열화상 카메라" style="width: 100%; border-radius: 16px; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; font-weight: 700;">열화상 카메라를 활용한 인체 열원 분석</h3>
+                        <p style="color: #334155; font-size: 1.15rem; line-height: 1.7; margin: 0; padding: 0;">눈으로 보이지 않는 두꺼운 연기나 가려진 장애물 뒤의 미세한 체온을 열감지 센서로 포착하여 수색 효율을 극대화하고 조난자의 생존 여부를 판단합니다.</p>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div style="display: flex; gap: 60px; align-items: center;">
+                    <div style="flex: 0 0 400px;">
+                        <img src="blue4.png" alt="생체 신호" style="width: 100%; border-radius: 16px; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; font-weight: 700;">생체 신호 및 호흡 센싱 시스템</h3>
+                        <p style="color: #334155; font-size: 1.15rem; line-height: 1.7; margin: 0; padding: 0;">초광대역(UWB) 레이더 센서 기술을 활용해 잔해더미 깊숙한 곳에 묻혀 있는 생존자의 미세한 호흡과 심장 박동 등 생체 신호를 벽 너머로 감지하는 첨단 탐지 기술입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 가스 및 화재 진압 -->
+        <div id="detail-disaster-2" class="disaster-detail-content" style="display: none; width: 100%; max-width: 1200px; padding: 20px 0; text-align: center;">
+            <img src="gas.png" alt="가스 및 화재 진압" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 15px 30px rgba(0,0,0,0.3);">
+        </div>
+
+        <!-- 위험물 제거 & 원격 조작 -->
+        <div id="detail-disaster-3" class="disaster-detail-content" style="display: none; width: 100%; max-width: 1200px; padding: 20px 0;">
+            
+            <div style="display: flex; flex-direction: column; gap: 80px;">
+                <!-- 1 -->
+                <div style="display: flex; gap: 60px; align-items: center;">
+                    <div style="flex: 0 0 400px;">
+                        <img src="didi1.png" alt="고정밀 햅틱 원격 조작 시스템" style="width: 100%; border-radius: 16px; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; font-weight: 700;">고정밀 햅틱 원격 조작 시스템</h3>
+                        <p style="color: #334155; font-size: 1.15rem; line-height: 1.7; margin: 0; padding: 0;">시각 정보뿐만 아니라 로봇 팔이 느끼는 미세한 힘과 진동을 작업자의 손에 그대로 전달하는 햅틱 기술을 적용하여, 폭발물 해체와 같은 초정밀 원격 조작 임무를 수행합니다.</p>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div style="display: flex; gap: 60px; align-items: center;">
+                    <div style="flex: 0 0 400px;">
+                        <img src="didi2.png" alt="강인한 고하중 다관절 매니퓰레이터" style="width: 100%; border-radius: 16px; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; font-weight: 700;">강인한 고하중 다관절 매니퓰레이터</h3>
+                        <p style="color: #334155; font-size: 1.15rem; line-height: 1.7; margin: 0; padding: 0;">특수 합금으로 제작되어 내구성이 뛰어나며, 고토크 모터 제어를 통해 무거운 위험물이나 장애물을 가뿐히 들어 올려 제거할 수 있는 고하중 특수 매니퓰레이터입니다.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div style="display: flex; gap: 60px; align-items: center;">
+                    <div style="flex: 0 0 400px;">
+                        <img src="didi3.png" alt="AI 기반 위험물 형상 인식 및 가이드" style="width: 100%; border-radius: 16px; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; font-weight: 700;">AI 기반 위험물 형상 인식 및 가이드</h3>
+                        <p style="color: #334155; font-size: 1.15rem; line-height: 1.7; margin: 0; padding: 0;">인공지능 비전 알고리즘이 폭발물이나 유독 가스 용기 등 다양한 위험물의 형상을 실시간으로 인식하고 분석합니다. 작업자에게 최적의 접근 및 조작 경로를 가이드하여 안전성을 확보합니다.</p>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div style="display: flex; gap: 60px; align-items: center;">
+                    <div style="flex: 0 0 400px;">
+                        <img src="didi4.png" alt="방사능 및 독성 물질 특수 차폐 툴킷" style="width: 100%; border-radius: 16px; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1;">
+                        <h3 style="color: #3b82f6; font-size: 1.8rem; margin-bottom: 20px; font-weight: 700;">방사능 및 독성 물질 특수 차폐 툴킷</h3>
+                        <p style="color: #334155; font-size: 1.15rem; line-height: 1.7; margin: 0; padding: 0;">화학물질 누출이나 방사능 오염 지역에서 임무를 수행하기 위해, 특수 차폐 소재로 제작된 툴킷을 장착합니다. 위험 물질을 안전하게 수거하거나 현장을 방재하는 전용 솔루션을 제공합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        function showDetail(id) {
+            const detailSection = document.getElementById('detail-section');
+            detailSection.style.display = 'flex';
+            
+            // 모든 디테일 콘텐츠 숨기기
+            document.querySelectorAll('.disaster-detail-content').forEach(card => {
+                card.style.display = 'none';
+            });
+            
+            // 선택된 디테일 콘텐츠 보이기
+            document.getElementById('detail-' + id).style.display = 'block';
+            
+            // 부드럽게 스크롤
+            detailSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <!-- Global Footer -->
+    <footer id="global-footer" class="footer-fade-in">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <strong>VELTROX</strong>
+            </div>
+            <div class="footer-info">
+                <p>
+                    서울특별시 oo구 ooo로 xxx 10층 <span class="divider">|</span> 대표이사 : 고윤호 <span class="divider">|</span> 사업자번호 : 116-71-xxxxx
+                </p>
+                <p>
+                    TEL : 02-1234-xxxx <span class="divider">|</span> FAX : 02-1235-xxxx <span class="divider">|</span> E-mail : webmaster@veltrox.com
+                </p>
+                <p class="copyright">Copyright &copy; VELTROX Corp. All Rights Reserved.</p>
+            </div>
+        </div>
+        <button id="scrollToTop" class="scroll-to-top" title="맨 위로 가기">&#x2191;</button>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const footer = document.getElementById('global-footer');
+            if (footer) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(footer);
+            }
+
+            const scrollTopBtn = document.getElementById('scrollToTop');
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
