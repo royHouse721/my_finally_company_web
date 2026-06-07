@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/S 신청 - VELTROX</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .as-hero {
+            background-color: #111;
+            padding: 120px 20px 100px;
+            text-align: center;
+            color: #fff;
+        }
+        .as-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        .as-hero p {
+            font-size: 1.15rem;
+            color: #bbb;
+        }
+        .as-container {
+            max-width: 800px;
+            margin: -60px auto 100px;
+            background: #fff;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 10;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 1.05rem;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            font-family: inherit;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #111;
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 20px;
+            background-color: #111;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 15px;
+        }
+        .submit-btn:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="sub-page">
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><strong>VELTROX</strong></a>
+            </div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="business.html">사업분야</a></li>
+                    <li><a href="vtx-irs.html">솔루션</a></li>
+                    <li><a href="about.html">회사소개</a></li>
+                    <li><a href="board.html">고객지원</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mega Menu Dropdown -->
+        <div class="mega-menu">
+            <div class="mega-menu-container">
+                <div class="mega-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=600&auto=format&fit=crop" alt="AI Vision Technology">
+                </div>
+                <div class="mega-lists">
+                    <ul class="sub-list">
+                        <li><a href="business.html">INDUSTRIAL ROBOT</a></li>
+                        <li><a href="disaster.html">DISASTER ROBOT</a></li>
+                        <li><a href="service.html">SERVICE ROBOT</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="vtx-irs.html">VTX-IRS</a></li>
+                        <li><a href="vtx-drs.html">VTX-DRS</a></li>
+                        <li><a href="vtx-srs.html">VTX-SRS</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="about.html#overview">회사개요</a></li>
+                        <li><a href="about.html#ceo">CEO 인사말</a></li>
+                        <li><a href="about.html#organization">조직도</a></li>
+                        <li><a href="about.html#partners">파트너</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="board.html">자유게시판</a></li>
+                        <li><a href="as.html">A/S 신청</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="contact.html#careers">인재채용</a></li>
+                        <li><a href="contact.html#inquiry">사업문의</a></li>
+                        <li><a href="contact.html#location">찾아오시는 길</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="as-hero">
+        <h1>A/S 신청</h1>
+        <p>VELTROX 로봇 제품의 A/S를 신청해주시면 신속하게 답변해 드리겠습니다.</p>
+    </div>
+
+    <div class="as-container">
+        <!-- FormSubmit 연동을 위한 폼 -->
+        <form action="https://formsubmit.co/1208gyh@gmail.com" method="POST">
+            <!-- FormSubmit 필수 숨김 설정: 스팸 방지 및 UI 향상 -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="새로운 A/S 신청이 접수되었습니다.">
+            <div class="form-group">
+                <label for="name">본인 이름</label>
+                <input type="text" id="name" name="name" required placeholder="이름을 입력해주세요">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">이메일 주소</label>
+                <input type="email" id="email" name="email" required placeholder="답변 받으실 이메일 주소를 입력해주세요">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">신청 내용</label>
+                <textarea id="message" name="message" required placeholder="A/S가 필요한 제품과 증상을 상세히 적어주세요" rows="8"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">A/S 신청 전송하기</button>
+        </form>
+    </div>
+
+    <!-- Global Footer -->
+    <footer id="global-footer" class="footer-fade-in">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <strong>VELTROX</strong>
+            </div>
+            <div class="footer-info">
+                <p>
+                    서울특별시 oo구 ooo로 xxx 10층 <span class="divider">|</span> 대표이사 : 고윤호 <span class="divider">|</span> 사업자번호 : 116-71-xxxxx
+                </p>
+                <p>
+                    TEL : 02-1234-xxxx <span class="divider">|</span> FAX : 02-1235-xxxx <span class="divider">|</span> E-mail : webmaster@veltrox.com
+                </p>
+                <p class="copyright">Copyright &copy; VELTROX Corp. All Rights Reserved.</p>
+            </div>
+        </div>
+        <button id="scrollToTop" class="scroll-to-top" title="맨 위로 가기">&#x2191;</button>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const footer = document.getElementById('global-footer');
+            if (footer) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(footer);
+            }
+
+            const scrollTopBtn = document.getElementById('scrollToTop');
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

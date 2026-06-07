@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사업분야 - VELTROX</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="sub-page">
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><strong>VELTROX</strong></a>
+            </div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="business.html">사업분야</a></li>
+                    <li><a href="vtx-irs.html">솔루션</a></li>
+                    <li><a href="about.html">회사소개</a></li>
+                    <li><a href="board.html">고객지원</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Mega Menu Dropdown -->
+        <div class="mega-menu">
+            <div class="mega-menu-container">
+                <div class="mega-image">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=600&auto=format&fit=crop" alt="AI Vision Technology">
+                </div>
+                <div class="mega-lists">
+                    <ul class="sub-list">
+                        <li><a href="business.html">INDUSTRIAL ROBOT</a></li>
+                        <li><a href="disaster.html">DISASTER ROBOT</a></li>
+                        <li><a href="service.html">SERVICE ROBOT</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="vtx-irs.html">VTX-IRS</a></li>
+                        <li><a href="vtx-drs.html">VTX-DRS</a></li>
+                        <li><a href="vtx-srs.html">VTX-SRS</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="about.html#overview">회사개요</a></li>
+                        <li><a href="about.html#ceo">CEO 인사말</a></li>
+                        <li><a href="about.html#organization">조직도</a></li>
+                        <li><a href="about.html#partners">파트너</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="board.html">자유게시판</a></li>
+                        
+                        <li><a href="as.html">A/S 신청</a></li>
+                    </ul>
+                    <ul class="sub-list">
+                        <li><a href="contact.html#careers">인재채용</a></li>
+                        <li><a href="contact.html#inquiry">사업문의</a></li>
+                        <li><a href="contact.html#location">찾아오시는 길</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="business-hero" class="subpage-hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('generated_industrial_robot.png'); background-size: cover; background-repeat: no-repeat; background-position: center center; background-color: #111;">
+        <div class="hero-content">
+            <h1>INDUSTRIAL</h1>
+            <p>스스로 움직이는 미래, VELTROX의 혁신적인 산업용 로봇</p>
+        </div>
+    </section>
+
+    <div class="sub-content" style="max-width: 1400px; margin: 0 auto; padding: 100px 50px; min-height: 100vh; display: flex; align-items: center; justify-content: center; width: 100%;">
+        <div class="business-grid" style="width: 100%;">
+            <div class="business-card" style="background-image: url('industrial1.png'); cursor: pointer;" onclick="showDetail('industrial')">
+                <h2>고속 병렬 조립 & 패키징 솔루션</h2>
+                <a href="javascript:void(0);" onclick="event.preventDefault(); event.stopPropagation();" class="learn-more">자세히 보기</a>
+            </div>
+            
+            <div class="business-card" style="background-image: url('industrial2.png'); cursor: pointer;" onclick="showDetail('disaster')">
+                <h2>대형 중량물 정밀 반송 시스템</h2>
+                <a href="javascript:void(0);" onclick="event.preventDefault(); event.stopPropagation();" class="learn-more">자세히 보기</a>
+            </div>
+            
+            <div class="business-card" style="background-image: url('industrial3.png'); cursor: pointer;" onclick="showDetail('service')">
+                <h2>인라인 실시간 인공지능 비전 검사</h2>
+                <a href="javascript:void(0);" onclick="event.preventDefault(); event.stopPropagation();" class="learn-more">자세히 보기</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 클릭 시 나타나는 상세 설명 영역 -->
+    <div id="detail-section" class="sub-content" style="display: flex; max-width: 1400px; margin: 0 auto; padding: 100px 50px; min-height: 100vh; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+        
+        <!-- 고속 병렬 조립 & 패키징 솔루션 -->
+        <div id="detail-industrial" class="detail-card" style="display: block; width: 100%; max-width: 1200px; padding: 60px;">
+            <h2>고속 병렬 조립 & 패키징 솔루션</h2>
+            <div class="timeline-container">
+                <div class="timeline-track">
+                    <div class="timeline-step active" onclick="changeTimeline(this, 'ind', 1)">
+                        <div class="step-label">컨베이어 트래킹</div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="timeline-step" onclick="changeTimeline(this, 'ind', 2)">
+                        <div class="step-label">고속 객체 매칭</div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="timeline-step" onclick="changeTimeline(this, 'ind', 3)">
+                        <div class="step-label">동적 모션 플래닝</div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="timeline-step" onclick="changeTimeline(this, 'ind', 4)">
+                        <div class="step-label">정밀 흡착 및 배치</div>
+                        <div class="step-dot"></div>
+                    </div>
+                </div>
+                <div class="timeline-content-box">
+                    <div id="ind-content-1" class="timeline-content active">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="industrial4.jpg" alt="Step 1 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>1단계: 컨베이어 트래킹 (Conveyor Tracking)</h3>
+                                <p>고속으로 이동하는 컨베이어 벨트의 속도와 로봇의 모션을 실시간으로 동기화합니다. 엔코더 데이터를 기반으로 벨트가 멈추지 않고 움직이는 상태에서도 로봇이 목표물의 정확한 위치를 추적할 수 있도록 제어합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ind-content-2" class="timeline-content">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="industrial5.png" alt="Step 2 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>2단계: 고속 객체 매칭 (High-Speed Object Matching)</h3>
+                                <p>상단에 장착된 초고속 카메라가 진입하는 부품의 형상, 방향, 앵글을 밀리초(ms) 단위로 캡처합니다. AI 비전 알고리즘이 부품이 뒤집히거나 틀어져 있어도 정확하게 중심점을 찾아냅니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ind-content-3" class="timeline-content">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="industrial6.png" alt="Step 3 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>3단계: 동적 모션 플래닝 (Dynamic Motion Planning)</h3>
+                                <p>델타 로봇의 3축 병렬 관절이 최소한의 궤적으로 움직일 수 있도록 최적의 이동 경로를 실시간으로 계산합니다. 관절에 무리를 주지 않으면서도 급가속과 급감속을 제어하는 최적화 단계입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ind-content-4" class="timeline-content">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="industrial7.png" alt="Step 4 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>4단계: 정밀 흡착 및 배치 (Precision Gripping & Placement)</h3>
+                                <p>진공 흡착 패드나 초경량 그리퍼를 제어하여 부품을 순간적으로 잡아낸 뒤, 지정된 트레이나 포장 박스의 정확한 정렬 위치에 0.1mm 오차 이내로 안전하게 안착시킵니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 대형 중량물 정밀 반송 시스템 -->
+        <div id="detail-disaster" class="detail-card" style="display: none; width: 100%; max-width: 1200px; padding: 60px;">
+            <h2>대형 중량물 정밀 반송 시스템</h2>
+            <div class="timeline-container">
+                <div class="timeline-track">
+                    <div class="timeline-step active" onclick="changeTimeline(this, 'dis', 1)">
+                        <div class="step-label">하중 실시간 센싱</div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="timeline-step" onclick="changeTimeline(this, 'dis', 2)">
+                        <div class="step-label">다축 토크 제어</div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="timeline-step" onclick="changeTimeline(this, 'dis', 3)">
+                        <div class="step-label">안전 구역 모니터링</div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="timeline-step" onclick="changeTimeline(this, 'dis', 4)">
+                        <div class="step-label">정밀 궤적 제어</div>
+                        <div class="step-dot"></div>
+                    </div>
+                </div>
+                <div class="timeline-content-box">
+                    <div id="dis-content-1" class="timeline-content active">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="disaster1.png" alt="Step 1 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>1단계: 하중 실시간 센싱 (Real-time Load Sensing)</h3>
+                                <p>로봇 팔 끝단(Tool)과 관절에 탑재된 F/T(Force/Torque) 센서를 통해 들어 올린 자재의 무게와 무게 중심을 실시간으로 측정합니다. 급격한 하중 변화로 인한 시스템 오작동을 원천 차단합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dis-content-2" class="timeline-content">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="disaster2.png" alt="Step 2 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>2단계: 다축 토크 제어 (Multi-axis Torque Control)</h3>
+                                <p>중량물을 이동할 때 발생하는 거대한 관성과 진동을 억제하기 위해 각 관절 모터의 출력을 미세하게 제어합니다. 로봇이 흔들림 없이 부드럽고 묵직하게 궤적을 그리며 움직이도록 만듭니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dis-content-3" class="timeline-content">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="disaster3.png" alt="Step 3 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>3단계: 안전 구역 다이내믹 모니터링 (Dynamic Safety Zone Monitoring)</h3>
+                                <p>세이프티 레이저 스캐너 및 AI 카메라와 연동하여 로봇 구동 범위 내에 작업자나 장애물이 진입하는지 감시합니다. 거리에 따라 1단계(감속), 2단계(비상 정지)로 안전 시스템을 가동합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dis-content-4" class="timeline-content">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="disaster4.png" alt="Step 4 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>4단계: 정밀 궤적 제어 (Precision Trajectory Control)</h3>
+                                <p>대형 자재를 목적지(거치대나 다음 공정 파트)에 하강시킬 때, 충격 없이 부드럽게 맞물리도록 다축 위치 제어를 수행합니다. 조립 공차 이내로 무거운 자재를 완벽히 안착시키며 공정을 마무리합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 인라인 실시간 인공지능 비전 검사 -->
+        <div id="detail-service" class="detail-card" style="display: none; width: 100%; max-width: 1200px; padding: 60px;">
+            <h2>인라인 실시간 인공지능 비전 검사</h2>
+            <div class="timeline-container">
+                <div class="timeline-track">
+                    <div class="timeline-step active" onclick="changeTimeline(this, 'srv', 1)">
+                        <div class="step-label">조명 오토 제어</div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="timeline-step" onclick="changeTimeline(this, 'srv', 2)">
+                        <div class="step-label">마이크로 캡처</div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="timeline-step" onclick="changeTimeline(this, 'srv', 3)">
+                        <div class="step-label">AI 불량 분석</div>
+                        <div class="step-dot"></div>
+                    </div>
+                    <div class="timeline-step" onclick="changeTimeline(this, 'srv', 4)">
+                        <div class="step-label">실시간 분류</div>
+                        <div class="step-dot"></div>
+                    </div>
+                </div>
+                <div class="timeline-content-box">
+                    <div id="srv-content-1" class="timeline-content active">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="service1.png" alt="Step 1 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>1단계: 스마트 조명 오토 제어 (Smart Lighting Auto Control)</h3>
+                                <p>제품의 재질(금속, 플라스틱, 유리 등)에 따라 표면의 스크래치나 결함이 가장 잘 보이도록 LED 조명의 밝기와 각도를 자동으로 조절합니다. 난반사를 최소화하여 검사 정확도를 높이는 기초 단계입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="srv-content-2" class="timeline-content">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="service2.png" alt="Step 2 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>2단계: 마이크로 비전 캡처 (Micro Vision Capture)</h3>
+                                <p>로봇 팔이 정밀 검사 포인트로 카메라를 이동시킨 후, 4K급 고해상도 인더스트리얼 카메라를 통해 제품의 외관, 홀(Hole) 치수, 커넥터 조립 상태 등을 초점 흐림 없이 선명하게 촬영합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="srv-content-3" class="timeline-content">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="service3.png" alt="Step 3 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>3단계: AI 딥러닝 불량 분석 (AI Deep Learning Defect Analysis)</h3>
+                                <p>촬영된 고화질 이미지를 미리 학습된 합성곱 신경망(CNN) 기반 딥러닝 모델로 초고속 분석합니다. 인간의 눈으로 놓치기 쉬운 미세한 크랙, 도장 불량, 조립 누락을 99.9% 확률로 판별합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="srv-content-4" class="timeline-content">
+                        <div class="content-split">
+                            <div class="content-img">
+                                <img src="service4.png" alt="Step 4 Image">
+                            </div>
+                            <div class="content-text">
+                                <h3>4단계: Pass/Fail 실시간 분류 (Real-time Pass/Fail Sorting)</h3>
+                                <p>AI 분석 결과에 따라 불량품(Fail)과 정상품(Pass)을 즉시 분류 신호로 보냅니다. 불량품은 별도의 리젝트 라인으로 배출하고, 검사 로그 데이터는 서버에 자동으로 기록하여 품질 이력을 관리합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- 적용사례 섹션 -->
+        <section class="use-cases-section" style="margin-top: 150px;">
+            <div class="use-cases-container">
+                <h2 class="use-cases-title">적용사례</h2>
+                <div class="use-cases-grid">
+                    <div class="use-case-card">
+                        <img src="pexels1.jpg" alt="스마트 팩토리 및 정밀 조립">
+                        <div class="use-case-overlay">
+                            <p style="color: #ff99aa;">스마트 팩토리 및<br>정밀 조립</p>
+                        </div>
+                    </div>
+                    <div class="use-case-card">
+                        <img src="pexels2.jpg" alt="자재 반송 및 물류 자동화">
+                        <div class="use-case-overlay">
+                            <p style="color: #00ffff;">자재 반송 및<br>물류 자동화</p>
+                        </div>
+                    </div>
+                    <div class="use-case-card">
+                        <img src="pexels3.jpg" alt="위험 공정 및 제조 자동화">
+                        <div class="use-case-overlay">
+                            <p style="color: #ffff00;">위험 공정 및<br>제조 자동화</p>
+                        </div>
+                    </div>
+                    <div class="use-case-card">
+                        <img src="pexels4.jpg" alt="인라인 실시간 품질 검사">
+                        <div class="use-case-overlay">
+                            <p style="color: #ffffff;">인라인 실시간<br>품질 검사</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script>
+        function showDetail(type) {
+            // 상세 영역 보이기 (flex로 변경)
+            const detailSection = document.getElementById('detail-section');
+            detailSection.style.display = 'flex';
+            
+            // 모든 카드를 일단 숨김
+            document.getElementById('detail-industrial').style.display = 'none';
+            document.getElementById('detail-disaster').style.display = 'none';
+            document.getElementById('detail-service').style.display = 'none';
+            
+            // 선택된 타입의 카드만 표시
+            document.getElementById('detail-' + type).style.display = 'block';
+            
+            // 해당 영역으로 부드럽게 스크롤
+            detailSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function changeTimeline(element, type, step) {
+            // 해당 타임라인 트랙 내의 모든 step에서 active 클래스 제거
+            const track = element.parentElement;
+            const steps = track.querySelectorAll('.timeline-step');
+            steps.forEach(s => s.classList.remove('active'));
+            
+            // 클릭된 step에만 active 클래스 추가
+            element.classList.add('active');
+            
+            // 해당 컨텐츠 박스의 모든 내용 숨김
+            const contentBox = track.nextElementSibling;
+            const contents = contentBox.querySelectorAll('.timeline-content');
+            contents.forEach(c => c.classList.remove('active'));
+            
+            // 클릭된 step에 해당하는 컨텐츠만 표시
+            document.getElementById(type + '-content-' + step).classList.add('active');
+        }
+    </script>
+    <!-- Global Footer -->
+    <footer id="global-footer" class="footer-fade-in">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <strong>VELTROX</strong>
+            </div>
+            <div class="footer-info">
+                <p>
+                    서울특별시 oo구 ooo로 xxx 10층 <span class="divider">|</span> 대표이사 : 고윤호 <span class="divider">|</span> 사업자번호 : 116-71-xxxxx
+                </p>
+                <p>
+                    TEL : 02-1234-xxxx <span class="divider">|</span> FAX : 02-1235-xxxx <span class="divider">|</span> E-mail : webmaster@veltrox.com
+                </p>
+                <p class="copyright">Copyright &copy; VELTROX Corp. All Rights Reserved.</p>
+            </div>
+        </div>
+        <button id="scrollToTop" class="scroll-to-top" title="맨 위로 가기">&#x2191;</button>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const footer = document.getElementById('global-footer');
+            if (footer) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+                observer.observe(footer);
+            }
+
+            const scrollTopBtn = document.getElementById('scrollToTop');
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
